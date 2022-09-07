@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Customer Detail</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       body{
+        background-image: linear-gradient(to right,rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnrXnO00LKGn48n88qGg5vTlwvbcONMcGgjLg4PUjE&s);
+        height: 100vh;
+        width:100% ; 
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    } 
+    .design .img{
+        background-image: linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpaperaccess.com/full/124102.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .design{
+     
+        display: flex;
+      
+        position:absolute;
+        /* flex-direction: row; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        background-color: aliceblue;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 800px;
+     
+    }
+    .form{
+         height:450px ; 
+        
+        flex-basis:50% ;
+       }
+  
+  
+    .IN{
+        width: 250px;
+
+        margin: 10px auto;
+        padding: 0;
+       
+    }
+
+    input{
+        outline: none;
+        height: 30px;
+        width: 200px;
+        border: none;
+        padding: 2px;
+        margin-left:5px ;
+    }
+   input:focus{
+     outline: none;
+     border: 0;
+     box-shadow: none;  
+   }
+    form{
+        padding: 5px;
+        margin-top: 20px;
+        position: relative;
+    }
+    @media screen and (max-width:800px) {
+      .design .img{
+    background-image: none;
+      }
+      .design{
+        width: 300px;
+      }
+
+       
+ }
+       
+       .form {
+        text-align: center;
+        text-transform: capitalize;
+       }
+       .btn{
+        margin: 10px 20px;
+        /* position: absolute; */
+        text-align: end;
+        /* left: 300px; */
+        float: right;
+        /* top: 360px; */
+       }
+       button{
+        width: 80px;
+        height: 40px;
+        background-color:transparent;
+        color: rgb(58, 83, 105);
+        border: 1px solid brown;
+       }
+       button:hover{
+        background-color: rgb(36, 53, 53);
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="design">
+        <div class="img form">
+        
+        </div>
+    <div class="form">
+        <form action="/paynow" method="POST">
+            <h2>customer details for car booking</h2>
+            <div class="IN">
+              
+                <i class="fa fa-user"></i>
+                <input type="name" id="NAME" name="NAME" placeholder="khush_Arora">
+                
+             </div>  
+             <div class="IN">
+                <i class="fa fa-phone"></i>
+                <input type="tel" id="NUMBER" name="NUMBER" placeholder="1234567890">
+             </div>
+            <div class="IN">
+             <i class="fa fa-envelope"></i>   
+            <input type="email" id="EMAIL" name="EMAIL" placeholder="arora@gmail.com">
+           
+            </div>
+           
+            <div class="IN">
+               <i class="fa fa-calendar"></i>   
+               <input type="date" id="DATE" name="DATE" placeholder="11-11-2011">
+            </div>  
+            <div class="IN">
+                <i class="fa fa-clock-o"></i>   
+                <input type="time" id="TIME" name="TIME" placeholder="12:00 PM">
+             </div> 
+            
+             <div class="IN">
+                <i class="fa fa-car"></i>   
+                <input type="text" id="CAR" name="CAR" placeholder="TAVERA">
+             </div>  
+             <div class="IN range">
+             <span>KM: </span>
+                <input type="text"  name="RANGE" placeholder="Only int allow___ 200" >
+            </div>
+            <div class="btn">
+                <button type="submit">PAY NOW</button>
+            </div>
+        </form>
+
+    </div>
+  
+</div>
+</body>
+</html>

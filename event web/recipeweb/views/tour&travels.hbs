@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous"
+  /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"> 
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <style>
+      *{
+    padding:0;
+    margin: 0;
+}
+.header
+{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnrXnO00LKGn48n88qGg5vTlwvbcONMcGgjLg4PUjE&s);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    /* animation-name: chnge; */
+    /* animation-duration: 4s; */
+}
+
+nav
+{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+nav img
+{
+    width: 150px;
+    /* border: 1px solid white; */
+}
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+    /* border: 1px solid white; */
+}
+
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-transform: capitalize;
+}
+.nav-links ul li a
+{
+    text-decoration: none;
+    color: white;
+    width:13px ;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color:rgb(176, 131, 131) ;
+    margin: auto;
+    display: block;
+    transition: width 0.5s;
+}
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+.text-box
+{
+    width: 80%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 
+{
+    font-size: 62px;
+    text-transform: capitalize;
+}
+.text-box p
+{
+    margin: 10px 0 40px;
+    font-size:14px ;
+    color: white;
+}
+.hero-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    background:transparent ;
+    padding: 12px 34px;
+    font-size:13px ;
+    position: relative;
+    cursor: pointer;
+    transition: border 2s, background-color 2s;
+}
+.hero-btn:hover
+{
+    border: 1px solid #f44336;
+    background-color:#f44336 ;
+   
+}
+
+nav .fa
+{
+    display: none;
+}
+@media(max-width:700px)
+{
+    .text-box h1
+    {
+        font-size:30px ;
+    }
+    .nav-links ul li
+    {
+        display: block;
+    }
+    .nav-links
+    {
+        position: absolute;
+        display: none;
+        background-color: #a24c46;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index:2;
+        width:200px;
+        transition:1s;
+    }
+    .nav-links ul
+    {
+         padding: 20px;
+    }
+    nav .fa
+    {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+    #SER{
+        position:relative;
+        /* display: inline-block; */
+    }
+    .ser {
+        /* position: absolute; */
+        display: none;
+        position: absolute;
+        /* color: black; */
+        background-color: #e6a0a0;
+        min-width: 200px;
+        text-align: center;
+        margin: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        white-space: nowrap;
+        
+    }
+    .ser a{
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         /* z-index:2; */
+         color: black !important;
+    }
+    #SER:hover .ser{display: block;}
+    .Travels
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    text-transform: capitalize;
+}
+.Travels h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.Travels p{
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding :10px;
+}
+.row
+{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tour-col
+{   
+    flex-basis: 40%;
+    border-radius: 10%;
+    margin-bottom: 5%;
+    text-align: left;
+    margin: 40px;
+}
+.tour-col img
+{
+    width: 100%;
+    /* height: 100%; */
+    display: block;
+    border-radius: 10px;
+    
+}
+.tour-col p
+{
+    padding: 0;
+}
+.tour-col h3
+{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.tour-col a{
+    color: black;
+    margin-top: 5px;
+    font-size: 15px;
+    border:1px solid  #e6a0a0;
+    text-align: center;
+    margin: 5px auto;
+}
+@media screen and (max-width:1000px)
+{
+  .tour-col{
+    flex-basis: 35%;
+  }
+  .tour-col h3{
+    font-size: 20px;
+  }
+  .tour-col p{
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width:600px)
+{
+  .tour-col{
+    flex-basis: 70%;
+    justify-content: center;
+  }
+  .tour-col h3{
+    font-size: 25px;
+  }
+  .tour-col p{
+    font-size: 20px;
+  }
+  .row{
+    justify-content: center;
+  }
+  
+}
+
+   </style>
+ <section class="header">
+        <nav>
+         <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnrXnO00LKGn48n88qGg5vTlwvbcONMcGgjLg4PUjE&s" alt="hlo"></a>
+      
+         <div class="nav-links" id="navLinks">
+            <i 
+            class="fa fa-times CLOSE" ></i>
+            <ul>
+               <li><a href="/home"> Home</a></li>
+               <li id="SER"><a href="/services"> services</a>
+                <div class="ser">
+                 <a href="#">Catering</a>
+                 <a href="#">Tent</a>
+                 <a href="#">Ground Management</a>
+                 <a href="#">Confectionery Work</a>
+                 <a href="#">Box Packing</a>
+                 <a href="#">Pickup & Drop</a>
+                </div>
+                </li>
+               <li><a href="/aboutus"> about us</a></li>
+               <li><a href="/contact"> contact</a></li>
+               <li><a href="#">Orders</a></li>
+               <li><a href="#">recipe</a></li>
+            </ul>
+         </div>
+         <i class="fa fa-bars CLICK" ></i>
+        </nav>
+        <div class="text-box">
+         <h1>TOUR & TRAVELS</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odio atque<br> perferendis
+            quas sapiente earum aspernatur doloribus minus recusandae vel reprehenderit <br>nostrum
+            autem dolor aliquam, fuga rerum deserunt quibusdam eligendi aliquid quidem! <br>Reprehenderit  
+            corporis, dolor ipsa laboriosam saepe culpa, dolores nisi repudiandae veritatis <br>rerum.</p>
+         <a href="/visit" class="hero-btn">visit us to know more</a>   
+       </div>
+   </section>
+   <section class="Travels">
+    <h1>TOUR & TRAVELS</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore velit obcaecati minu
+        ipsa numquam molestias reprehenderit ea
+        , assumenda similique error cum sint deserunt dolor impedit sequi magnam quo quasi nam!
+    </p>
+
+    <div class="row">
+        <div class="tour-col tavera">
+           <img src="https://www.pngitem.com/pimgs/m/715-7150102_tavera-car-images-png-transparent-png.png">
+           <h3>Tavera &#8377 13/km</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque iste voluptas harum accusantium, commodi nesciunt numquam! Sapiente </p>
+           <a href="/CarVisit" class="hero-btn">Click For Booking</a>
+        </div>
+        <div class="tour-col">
+            <img src="data:image/jpeg;base64,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">
+            <h3>Enova &#8377 14/km </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque iste voluptas harum accusantium, commodi nesciunt numquam! Sapiente </p>
+            <a href="/CarVisit" class="hero-btn">Click For Booking</a> 
+        </div>
+         <div class="tour-col">
+            <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20201015102234_2021-Toyota-Innova-Crysta-facelift-sliver-studio.jpg&w=772&h=511&q=75&c=1">
+            <h3> Marrazo &#8377 13/km </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque iste voluptas harum accusantium, commodi nesciunt numquam! Sapiente </p>
+            <a href="/CarVisit" class="hero-btn">Click For Booking</a> 
+        </div>
+         <div class="tour-col">
+            <img src="https://images.carandbike.com/car-images/big/chevrolet/sail-uva/chevrolet-sail-uva.jpg?v=7">
+            <h3>sail &#8377 12/km </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque iste voluptas harum accusantium, commodi nesciunt numquam! Sapiente </p>
+            <a href="/CarVisit" class="hero-btn">Click For Booking</a> 
+        </div>
+         <div class="tour-col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdYJ3Ipd01EcPIX12SBpzSYgYPBLh-3E9HKc9PczvM20eBq4AWbnqAhP57tMHY5s_CNkk&usqp=CAU">
+            <h3>Pickup &#8377 20/km </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus atque iste voluptas harum accusantium, commodi nesciunt numquam! Sapiente </p>
+            <a href="/CarVisit" class="hero-btn">Click For Booking</a> 
+        </div>
+         </div>
+   </section>
+   <footer class="text-center bg-gray-900 text-white">
+    <div class="foot" style="background-color:rgba(30, 27, 27, 0.2) ;margin-top:10px; padding:10px ;">
+      <h3 style=" font-size:20px;">Contact Us on social media</h3>
+       
+    </div>
+    <div class="container px-6 pt-6">
+      <div class="flex justify-center mb-6">
+        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="facebook-f"
+          class="w-2 h-full mx-auto"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <path
+            fill="currentColor"
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+          ></path>
+          </svg>
+        </a>
+  
+        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+            data-icon="twitter"
+            class="w-3 h-full mx-auto"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor"
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+            ></path>
+          </svg>
+        </a>
+  
+        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+            data-icon="google"
+            class="w-3 h-full mx-auto"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 488 512"
+          >
+            <path
+              fill="currentColor"
+              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+            ></path>
+          </svg>
+        </a>
+  
+        <a href="#" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="instagram"
+            class="w-3 h-full mx-auto"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            ></path>
+          </svg>
+        </a>
+  
+        <a href="https://www.linkedin.com/in/yashashvi-arora-02ba3920b/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="linkedin-in"
+            class="w-3 h-full mx-auto"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+            ></path>
+          </svg>
+        </a>
+  
+        <a href="https://github.com/Yashashviarora" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+          <svg aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="github"
+            class="w-3 h-full mx-auto"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 496 512"
+          >
+            <path
+              fill="currentColor"
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+ 
+    </div>
+  </footer>
+   
+
+</body>
+</html>
