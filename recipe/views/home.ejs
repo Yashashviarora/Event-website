@@ -53,7 +53,7 @@
       </a> -->
   <% if(categories !=''){ %>
     <% categories.forEach(function(category){ %>
-      <a href="/categories" class="col text-center category__link">
+      <a href="/categories/<%- category.name %>" class="col text-center category__link">
       <div class="category__img shadow">
         <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy">
       </div>
@@ -189,7 +189,7 @@
           <p class="lead">Share your amazing recipies with thousands of web developers accross the world. Fill our form to get started.</p>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href="/submit-recipe"  class="btn btn-primary btn-dark btn-lg text-capitalize">submit recipe</a>
+            <a href="/submitrecipe"  class="btn btn-primary btn-dark btn-lg text-capitalize">submit recipe</a>
  
           </div>
       </div>

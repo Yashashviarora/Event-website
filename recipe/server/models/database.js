@@ -28,7 +28,7 @@
 //   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   // client.close();
-  const mongo=require("mongoose");
+const mongo=require("mongoose");
 mongo.connect("mongodb://127.0.0.1:27017/COOKING")
 // var conn=mongo.connection;
 mongo.connection.on('connected', () => console.log('Connected'));

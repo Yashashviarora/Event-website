@@ -63,16 +63,48 @@ exports.exploreCategoriesById = async(req, res) => {
   exports.exploresearch = async(req, res) => {
     try {
       let searchTerm = req.body.search;
-      let recipe = await Recipe.find( { $text: { $search: searchTerm, $diacriticSensitive: true } });
+     
       res.render('Search', { title: 'Cooking Blog - Search', recipe } );
     } catch (error) {
       res.satus(500).send({message: error.message || "Error Occured" });
     }
     
   }
+  exports.submitrecipe=async(req,res)=>{
+    // console.log("hello")
+    try{
+      res.render('submitrecipe',{title:'Submit Your Recipe Here'}
+      );
+  }catch(error){
+    res.satus(500).send({message: error.message || "Error Occured" });
+  }
+
+    }
+ 
+    exports.Submit=async(req,res)=>{
+      const { name, image } = req.body;
+      console.log(req.body.name)
+      if (!name || !image) {
+        return res.status(400).send('Name and image are required');
+      }
+      try {
+        // Save data to database
+        const category = new Category({ name, image });
+        await category.save();
+        return res.send('Data saved');
+      } catch (error) {
+        console.error(error);
+        return res.status(500).send('Server error');
+      }
+      // console.log("hello")
+    };
+    
+
+    
+  
 // async function insertdummycategory(){
 //     try{
-//         await Category.insertMany([
+//         await Category.insertMany([ let recipe = await Recipe.find( { $text: { $search: searchTerm, $diacriticSensitive: true } });
 //             {
 //             "name":"indian",
 //              "image":"https://image.shutterstock.com/z/stock-photo-rajasthani-traditional-cuisine-dal-baati-also-know-as-dal-bati-or-daal-baati-churma-on-wooden-780441559.jpg"

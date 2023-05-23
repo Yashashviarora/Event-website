@@ -7,6 +7,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 body{
+  margin-left: 5px;
+  margin-right: 5px;
+
    background-image: url("/img/i-like-food.svg");
    overflow-x: hidden;
    
@@ -247,6 +250,7 @@ nav .logo.space{
 }
 
 .category__img{
+    margin-left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
